@@ -5,7 +5,7 @@ export default function Card(props) {
   function formatDate(dateString) {
     if (dateString) {
       const event = new Date(dateString)
-      const options = { dateStyle: 'full', timeStyle: 'short' }
+      let options = { weekday: 'short', day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit' }
 
       return event.toLocaleString('sv-SE', options)
     } else {
